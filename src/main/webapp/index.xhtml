@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Currency Converter</title>
+    </h:head>
+    <h:body>
+        <h1>Convert Currencies</h1>
+        <h:form>
+            <h4>From Currency:</h4>
+            <h:selectOneMenu value="#{cconvManager.fromc}">
+                <f:selectItems value="#{cconvManager.hm}" />
+            </h:selectOneMenu>
+            <br/>
+            <br/>
+            <h:outputLabel for="fromm" value="How much money:  "/>
+            <h:inputText id="fromm" value="#{cconvManager.fromm}"/>
+            <hr></hr>
+            <h4>To Currency:</h4>
+            <h:selectOneMenu value="#{cconvManager.toc}">
+                <f:selectItem itemValue="SEK" itemLabel="SEK" />
+                <f:selectItem itemValue="EUR" itemLabel="EUR" />
+                <f:selectItem itemValue="GBP" itemLabel="GBP" />
+                <f:selectItem itemValue="USD" itemLabel="USD" />
+            </h:selectOneMenu>
+            <br/>
+            <br/>
+            <h:outputLabel for="tom" value="Converts to:  "/>
+            <h:outputText id = "tom" value="#{cconvManager.tom}"/>
+            <hr></hr>
+            <h:commandButton value="Convert" action="#{cconvManager.convert}"/>
+        </h:form>
+    </h:body>
+</html>
+

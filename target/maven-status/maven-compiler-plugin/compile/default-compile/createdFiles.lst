@@ -1,0 +1,8 @@
+model\currencyT_.class
+model\currencyT.class
+view\cconvManager.class
+integration\cconvDAO.class
+model\CurrencyException.class
+model\currencyF.class
+controller\ccontroller.class
+model\currencyF_.class
